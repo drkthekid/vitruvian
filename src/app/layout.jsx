@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
         >
           <ClickSpark
             sparkColor="#ffffff"
