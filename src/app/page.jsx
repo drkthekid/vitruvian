@@ -1,3 +1,4 @@
+import Contact from "@/components/features/contact/contact";
 import CTA from "@/components/features/cta/cta";
 import Hero from "@/components/features/hero";
 import Services from "@/components/features/services";
@@ -10,6 +11,7 @@ export default function Home() {
     <Services/>
     <Testimonial/>
     <CTA/>
+    <Contact/>
     </>
   );
 }
