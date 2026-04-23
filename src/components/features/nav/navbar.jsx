@@ -1,17 +1,16 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/logo";
-import { NavMenu } from "@/components/features/nav/nav-menu";
 import { NavigationSheet } from "@/components/features/nav/navigation-sheet";
 import { ButtonTheme } from "../themes/button";
 import Link from "next/link";
+import { LogoNavBar } from "@/components/logos/logo-nav-bar";
 
 const Navbar = () => {
   return (
     <nav className="h-16 border-b bg-background">
       <div
         className="mx-auto flex h-full max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo />
+        <LogoNavBar />
 
         <div className="flex items-center gap-3">
           <ButtonTheme />

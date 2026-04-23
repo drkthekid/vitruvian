@@ -1,4 +1,4 @@
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/logos/logo";
 import { Camera, Wheat } from "lucide-react";
 import Link from "next/link";
 

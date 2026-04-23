@@ -7,7 +7,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/logos/logo";
 import { NavMenu } from "@/components/features/nav/nav-menu";
 
 export const NavigationSheet = () => {
