@@ -4,7 +4,7 @@ import Link from "next/link";
 export const Logo = () => (
   <Link href="/" className="relative inline-block">
     <Image
-      src="/logo/logo.png"
+      src="/logo/padrao-light.png"
       alt="Logo"
       className="object-contain"
       priority
