@@ -13,12 +13,11 @@ const Hero = () => {
       <div className="mx-auto grid w-full max-w-(--breakpoint-xl) items-center gap-16 px-6 py-16 sm:py-20 lg:grid-cols-2 lg:py-24">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           
-          <h1 className="font-semibold tracking-tight leading-[1.1] 
+          <h1 className="font-semibold 
             text-4xl 
             sm:text-5xl 
             md:text-6xl 
-            lg:text-[3.5rem] 
-            xl:text-[4rem]"
+            lg:text-[3.5rem]"
           >
             Nós criamos{" "}
             <span className="relative inline-block whitespace-nowrap">

@@ -16,7 +16,9 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <ButtonTheme />
           <Button className="hidden sm:inline-flex" variant="outline">
-            Serviços
+             <Link href={"/services"} >
+             Serviços
+            </Link>
           </Button>
 
           <Button >
