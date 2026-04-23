@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, ArrowRight, Blocks, Settings2 } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Blocks, Settings2, Building2, ShieldPlus, UserKey, Handshake, Layers2 } from "lucide-react";
 
 export default function Services() {
   return (
@@ -27,11 +27,11 @@ export default function Services() {
 
       <div className="mt-20 w-full">
         <div className="mx-auto w-full max-w-(--breakpoint-xl) px-0 sm:px-6">
-          
+
           <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            
+
             <div className="rounded-xl border bg-muted p-6 text-left hover:shadow-lg transition">
-              
+
               <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
 
               <span className="font-semibold text-lg sm:text-xl">
@@ -62,12 +62,77 @@ export default function Services() {
               </Button>
             </div>
 
-            <div className="hidden rounded-xl border bg-muted md:block lg:col-span-2 min-h-[250px]" />
-            <div className="hidden rounded-xl border bg-muted md:block lg:col-span-2 min-h-[250px]" />
-            <div className="rounded-xl border bg-muted p-6 text-left hover:shadow-lg transition">
-              
+            <div className="rounded-xl border bg-muted p-6 text-left hover:shadow-lg transition md:col-span-2">
+              <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
+              <span className="font-semibold text-lg sm:text-xl">
+                Desenvolvimento de Sistemas sob Medida
+              </span>
+
+              <ul className="mt-6 space-y-5">
+                <li>
+                  <div className="flex items-start gap-3">
+                    <Building2 className="shrink-0" />
+                    <p className="text-sm sm:text-base">
+                      Projetamos sistemas de gestão (ERPs), painéis administrativos e plataformas web complexas para otimizar seus processos internos.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start gap-3">
+                    <ShieldPlus className="shrink-0" />
+                    <p className="text-sm sm:text-base">
+                      Arquitetura robusta preparada para crescer junto com a sua empresa, utilizando tecnologias de ponta para garantir estabilidade e proteção de dados.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <Button className="mt-8 w-full">
+                Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="rounded-xl border bg-muted p-6 text-left hover:shadow-lg transition md:col-span-2">
               <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
 
+              <span className="font-semibold text-lg sm:text-xl">
+                Aplicações Web Interativas
+              </span>
+
+              <ul className="mt-6 space-y-5">
+                <li>
+                  <div className="flex items-start gap-3">
+                    <UserKey className="shrink-0" />
+                    <p className="text-sm sm:text-base">
+                      Plataformas Exclusivas: Desenvolvemos portais de membros, sistemas de agendamento, áreas logadas e fóruns personalizados.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start gap-3">
+                    <Handshake className="shrink-0" />
+                    <p className="text-sm sm:text-base">
+                      Ecossistema Completo: Unimos um front-end impecável a um banco de dados inteligente, garantindo que a regra de negócio do seu projeto funcione sem falhas.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start gap-3">
+                    <Layers2 className="shrink-0" />
+                    <p className="text-sm sm:text-base">
+                      Experiência Dinâmica: Aplicamos as tecnologias mais modernas para criar interfaces que funcionam com a fluidez de um aplicativo de celular, direto no navegador.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <Button className="mt-8 w-full">
+                Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="rounded-xl border bg-muted p-6 text-left hover:shadow-lg transition">
+              <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
               <span className="font-semibold text-lg sm:text-xl">
                 Landing Pages
               </span>
