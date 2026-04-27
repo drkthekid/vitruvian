@@ -5,15 +5,15 @@ import Link from "next/link";
 const links = [
   {
     title: "Início",
-    href: "/#about",
+    href: "/",
   },
   {
     title: "Serviços",
-    href: "/#contact",
+    href: "/services",
   },
   {
     title: "Contato",
-    href: "/#terms",
+    href: "/appointment",
   },
 ];
 

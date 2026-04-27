@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 
 const services = [
@@ -12,13 +10,14 @@ const services = [
     description:
       "Criamos sistemas completos e personalizados que se adaptam ao fluxo da sua empresa. De ERPs internos a plataformas SaaS escaláveis.",
     items: [
-      "Arquitetura escalável com React e Node.js",
+      "Arquitetura escalável",
       "Integração com APIs e serviços externos",
       "Painel administrativo completo",
-      "Banco de dados otimizado (PostgreSQL / MongoDB)",
+      "Banco de dados",
       "Deploy e manutenção contínua",
     ],
-    stack: ["React", "Node.js", "PostgreSQL"],
+    stack: ["React", "Node.js", "SQL", "Pandas"],
+    image: "illustration/perfomance.svg",
   },
   {
     tag: "Serviço 02",
@@ -32,21 +31,22 @@ const services = [
       "Animações suaves",
       "Integração com redes sociais",
     ],
-    stack: ["Next.js", "Tailwind", "SEO"],
+    stack: ["Next.js", "React", "Tailwind", "SEO"],
+   image: "illustration/success.svg",
   },
   {
     tag: "Serviço 03",
-    title: "Landing Pages de Alta Conversão",
+    title: "Landing Pages",
     description:
       "Landing pages projetadas para converter visitantes em clientes com estratégia, design e performance.",
     items: [
       "Copywriting estratégico",
-      "Testes A/B",
       "Formulários inteligentes",
       "Carregamento ultra-rápido",
       "Tracking de conversão",
     ],
-    stack: ["React", "Analytics", "CRO"],
+    stack: ["React", "Next.js", "Analytics"],
+    image: "illustration/responsive.svg",
   },
   {
     tag: "Serviço 04",
@@ -55,12 +55,12 @@ const services = [
       "Plataformas completas com dashboards, autenticação e experiências ricas em tempo real.",
     items: [
       "Dashboards em tempo real",
+      "Integrações com Planilhas e APIs",
       "Autenticação segura",
       "APIs escaláveis",
-      "Notificações live",
-      "Arquitetura modular",
     ],
-    stack: ["React", "Node.js", "WebSockets"],
+    stack: ["React", "Next.js", "Node.js", "WebSockets", "Pandas"],
+    image: "illustration/data.svg",
   },
 ];
 
@@ -79,13 +79,14 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-end relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl blur-3xl"></div>
           <Image
             src="/illustration/services.svg"
             alt="Ilustração de serviços"
             width={520}
             height={520}
-            className="w-full max-w-md"
+            className="w-full max-w-md relative drop-shadow-2xl hover:scale-105 transition-transform duration-500 ease-out"
             priority
           />
         </div>
@@ -107,9 +108,8 @@ export default function ServicesSection() {
 function ServiceBlock({ service, reverse }) {
   return (
     <div
-      className={`mx-auto max-w-7xl grid gap-16 lg:grid-cols-2 items-center ${
-        reverse ? "lg:[&>div:first-child]:order-2" : ""
-      }`}
+      className={`mx-auto max-w-7xl grid gap-16 lg:grid-cols-2 items-center ${reverse ? "lg:[&>div:first-child]:order-2" : ""
+        }`}
     >
       <div>
         <span className="text-sm text-primary font-medium">
@@ -138,20 +138,31 @@ function ServiceBlock({ service, reverse }) {
         </ul>
       </div>
 
-      <div className="rounded-2xl border p-10">
+      <div className="rounded-2xl border bg-gradient-to-br from-background/50 to-background/30 backdrop-blur-sm p-10 flex flex-col shadow-lg hover:shadow-2xl transition-shadow duration-300 border-foreground/10">
         <h3 className="text-lg font-semibold">Stack</h3>
 
         <div className="mt-6 flex flex-wrap gap-3">
           {service.stack.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border px-4 py-2 text-xs text-foreground/70"
+              className="rounded-full border bg-foreground/5 px-4 py-2 text-xs text-foreground/70 hover:bg-primary/10 hover:text-primary transition-colors duration-200 cursor-default"
             >
               {tech}
             </span>
           ))}
         </div>
-        
+
+        <div className="mt-8 relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+          <Image
+            src={service.image}
+            alt={service.title}
+            width={400}
+            height={400}
+            className="w-full rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 relative group-hover:scale-105 group-hover:-translate-y-1"
+            priority
+          />
+        </div>
 
         <p className="mt-6 text-sm text-foreground/60">
           Tecnologia aplicada para performance, escalabilidade e manutenção.

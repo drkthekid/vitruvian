@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight, Blocks, Settings2, Building2, ShieldPlus, UserKey, Handshake, Layers2 } from "lucide-react";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -57,8 +58,10 @@ export default function Services() {
                 </li>
               </ul>
 
-              <Button className="mt-8 w-full">
-                Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+              <Button className="mt-8 w-full" asChild>
+                <Link href={"/services"}>
+                  Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
 
@@ -87,8 +90,10 @@ export default function Services() {
                 </li>
               </ul>
 
-              <Button className="mt-8 w-full">
-                Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+              <Button className="mt-8 w-full" asChild>
+                <Link href={"/services"}>
+                  Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
 
@@ -126,8 +131,10 @@ export default function Services() {
                 </li>
               </ul>
 
-              <Button className="mt-8 w-full">
-                Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+               <Button className="mt-8 w-full" asChild>
+                <Link href={"/services"}>
+                  Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
 
@@ -156,8 +163,10 @@ export default function Services() {
                 </li>
               </ul>
 
-              <Button className="mt-8 w-full">
-                Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+             <Button className="mt-8 w-full" asChild>
+                <Link href={"/services"}>
+                  Ver mais <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
 

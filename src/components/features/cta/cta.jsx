@@ -12,7 +12,7 @@ const CTA = () => {
           src="/images/ascii-art.png"
         />
 
-        <div className="relative isolate bg-linear-to-r from-black to-black/50 px-10 py-14">
+        <div className="relative isolate bg-linear-to-r from-primary to-primary/50 px-10 py-14">
           
           <h2 className="font-semibold text-4xl text-white tracking-tight sm:text-5xl">
             Pronto para levar seu negócio para o próximo nível?
@@ -23,7 +23,7 @@ const CTA = () => {
           </p>
 
           <Button
-            className="mt-10 bg-white text-black ring-4 ring-white/30 hover:bg-white/90"
+            className="mt-10 bg-white text-primary ring-4 ring-white/30 hover:bg-white/90"
             size="lg"
           >
             Falar com a gente
