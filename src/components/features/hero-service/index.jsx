@@ -80,13 +80,13 @@ export default function ServicesSection() {
         </div>
 
         <div className="flex justify-center lg:justify-end relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl blur-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl"></div>
           <Image
             src="/illustration/services.svg"
             alt="Ilustração de serviços"
             width={520}
             height={520}
-            className="w-full max-w-md relative drop-shadow-2xl hover:scale-105 transition-transform duration-500 ease-out"
+            className="w-full max-w-md relative drop-shadow-2xl transition-transform duration-500"
             priority
           />
         </div>
@@ -159,7 +159,7 @@ function ServiceBlock({ service, reverse }) {
             alt={service.title}
             width={400}
             height={400}
-            className="w-full rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 relative group-hover:scale-105 group-hover:-translate-y-1"
+            className="w-full rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 relative group-hover:-translate-y-1"
             priority
           />
         </div>

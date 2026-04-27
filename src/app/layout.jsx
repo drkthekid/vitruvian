@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" suppressHydrationWarning className={montserrat.variable}>
+    <html lang="pt-br" suppressHydrationWarning className={montserrat.variable + " scroll-smooth"}>
       <head>
         <link rel="icon" href="/logo/padrao-light.png" sizes="any" />
       </head>

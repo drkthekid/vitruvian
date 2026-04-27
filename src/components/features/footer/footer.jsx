@@ -12,8 +12,12 @@ const links = [
     href: "/services",
   },
   {
-    title: "Contato",
+    title: "Agendamento",
     href: "/appointment",
+  },
+  {
+    title: "Contato",
+    href: "/#contact",
   },
 ];
 

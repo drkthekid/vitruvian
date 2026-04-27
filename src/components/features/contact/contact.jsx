@@ -42,7 +42,7 @@ export const Contato = ({ id }) => {
 
   return (
     <>
-      <section className="py-28 px-6 space-y-20">
+      <section className="py-28 px-6 space-y-20" id="contact">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="space-y-6">
