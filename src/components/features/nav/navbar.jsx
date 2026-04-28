@@ -1,38 +1,50 @@
-'use client'
-import { Button } from "@/components/ui/button";
-import { NavigationSheet } from "@/components/features/nav/navigation-sheet";
-import { ButtonTheme } from "../themes/button";
-import Link from "next/link";
-import { LogoNavBar } from "@/components/logos/logo-nav-bar";
+"use client";
+import StaggeredMenu from './StaggeredMenu';
+import { useTheme } from 'next-themes';
+import { useState, useEffect, use } from 'react';
 
-const Navbar = () => {
+const menuItems = [
+  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+  { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
+  { label: 'Services', ariaLabel: 'View our services', link: '/services' },
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+];
+
+const socialItems = [
+  { label: 'Twitter', link: 'https://twitter.com' },
+  { label: 'GitHub', link: 'https://github.com' },
+  { label: 'LinkedIn', link: 'https://linkedin.com' }
+];
+
+export default function Navbar() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const isDark = resolvedTheme === 'dark';
+  
   return (
-    <nav className="h-16 border-b bg-background">
-      <div
-        className="mx-auto flex h-full max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
-        <LogoNavBar />
-
-        <div className="flex items-center gap-3">
-          <ButtonTheme />
-          <Button className="hidden sm:inline-flex" variant="outline">
-             <Link href={"/services"} >
-             Serviços
-            </Link>
-          </Button>
-
-          <Button >
-            <Link href={"/appointment"} >
-              Faça um agendamento
-            </Link>
-          </Button>
-
-          <div className="md:hidden">
-            <NavigationSheet />
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+    <div style={{ background: '#1a1a1a' }}>
+      <StaggeredMenu
+        position="right"
+        items={menuItems}
+        socialItems={socialItems}
+        displaySocials={false}
+        displayItemNumbering={true}
+        menuButtonColor={isDark ? '#ffffff' : '#000000'}
+        openMenuButtonColor={isDark ? '#000000' : '#ffffff'}
+        changeMenuColorOnOpen={true}
+        colors={['#B497CF', '#5227FF']}
+        accentColor="#5227FF"
+        onMenuOpen={() => console.log('Menu opened')}
+        onMenuClose={() => console.log('Menu closed')}
+      />
+    </div>
+  )
+}

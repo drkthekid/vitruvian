@@ -10,6 +10,7 @@ export function ButtonTheme() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   React.useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
